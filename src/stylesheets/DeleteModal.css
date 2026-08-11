@@ -1,0 +1,27 @@
+.delete-btn {
+    background-color: rgb(248, 56, 56);
+    color: white;
+}
+
+.delete-btn:hover {
+    animation-name: delete_animation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes delete_animation {
+    0% {
+        text-shadow: 0px 0px black;   
+    }
+
+    50% {
+        text-shadow: 2px 2px black;
+        box-shadow: 2px 2px 10px black;
+    }
+
+    100% {
+        text-shadow: 0px 0px black;
+    }
+
+}

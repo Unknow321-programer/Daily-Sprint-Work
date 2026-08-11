@@ -1,0 +1,20 @@
+.view-container {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.view-container span {
+    /* display: block; */
+    padding: 10px;
+    font-family: cursive;
+    border: 1px solid black;
+    margin: 10px;
+    color: whitesmoke;
+    background-color: rgb(29, 154, 200);
+    border-radius: 10px 0px 10px 0px;
+}
+.view-back-btn {
+    background-color: rgb(247, 210, 101);
+    color: whitesmoke;
+}

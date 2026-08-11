@@ -1,0 +1,70 @@
+.addBtn {
+    margin-bottom: 10px;
+}
+.add-project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: cursive;
+    
+}
+.add-project .form-container {
+    /* border: 1px solid black; */
+    border-radius: 10px 0px 10px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 10px;
+    background-color: rgb(236, 187, 63);
+    box-shadow: none;
+    transition: box-shadow 2s;
+}
+.add-project .form-container:hover {
+    box-shadow: 3px 3px 10px grey;
+}
+.add-project .form-container .input-group {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.add-project .addProject , .cancelProject{
+    background-color: inherit;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    width: 50%;
+    align-self: center;
+    box-shadow: none;
+    border: none;
+    transition: color 2s, box-shadow 2s, background-color 2s;
+}
+.add-project .addProject:hover , .cancelProject:hover{
+    color: white;
+    box-shadow: 30px 30px 10px 1 gray;
+    background-color: rgb(98, 163, 0);
+}
+.cancelProject:hover {
+    background-color: tomato !important;
+}
+.cancelProject {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.add-project input {
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 7px 10px;
+    border: none;
+    background-color: inherit;
+    outline: none;
+    border-bottom: 1px dashed black;
+}
+.add-project input:focus {
+    border-bottom: 1px solid black;
+}
+.add-project .error {
+    color: red;
+    align-self: flex-end;
+    margin-right: 10px;
+}

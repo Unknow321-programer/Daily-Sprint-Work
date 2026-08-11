@@ -1,0 +1,42 @@
+.loader-view {
+    height: 100vh;
+    width: 100vw;
+}
+
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: inherit;
+    height: inherit;
+}
+.loader {
+    animation-name: loading;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes loading {
+    0% {
+        transform: rotate(0deg);
+        color:chocolate;
+    }
+    25% {
+        transform: rotate(90deg);
+        color:rgb(210, 174, 30);
+    }
+    50% {
+        transform: rotate(180deg);
+        color:rgb(155, 216, 42);
+    }
+    75% {
+        transform: rotate(270deg);
+        color:rgb(30, 210, 138);
+    }
+    100% {
+        transform: rotate(360deg);
+        color:rgb(210, 30, 198);
+    }
+}

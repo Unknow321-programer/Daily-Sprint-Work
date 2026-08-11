@@ -1,0 +1,22 @@
+.pagination-container {
+    display: flex;
+    justify-content: center;
+}
+.pagination-container button {
+    margin-right: 10px;
+    text-decoration: none;
+    font-family: cursive;
+    color:rgb(74, 15, 129);
+    padding: 4px;
+    background-color: rgb(241, 248, 141);
+    border: 1px solid tomato;
+    border-radius: 10px 0px 10px 0px;;
+}
+.pagination-container button:hover {
+    background-color: tomato;
+    color: white;
+}
+.active-page {
+    background-color: tomato !important;
+    color: white !important;
+}

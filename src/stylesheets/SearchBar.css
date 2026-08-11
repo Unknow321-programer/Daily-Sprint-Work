@@ -1,0 +1,14 @@
+.searchbar .searchbox-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.searchbox-container input , .searchbox-container label {
+    padding: 10px;
+    border-radius: 10px 0px 10px 0px;
+    margin-right: 10px;
+    font-family: cursive;
+    font-size: 1rem;
+}

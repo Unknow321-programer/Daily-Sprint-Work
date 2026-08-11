@@ -1,0 +1,15 @@
+.dialog-container {
+    background-color: whitesmoke;
+    border: 1px dashed black;
+    color: black;
+    border-radius: 10px 0px 10px 0px;
+    font-weight: bold;
+}
+.dialog-container span, .dialog-container button {
+    padding: 5px;
+    font-family: cursive;
+}
+.dialog-container button {
+    margin: 5px 10px;
+    font-weight: bold;
+}

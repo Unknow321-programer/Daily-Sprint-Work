@@ -1,0 +1,49 @@
+.edit-section {
+    border: 1px solid rgb(4, 4, 4);
+    background-color: rgb(101, 235, 219);
+    margin-top: 10px;
+}
+.edit-over-container {
+    border: 1px solid black;
+
+}
+.edit-over-container .form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.edit-over-container .input-group {
+    display: flex;
+    direction: row;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+.edit-over-container button {
+    margin-bottom: 10px;
+    width: 50%;
+    align-self: center;
+    background-color: inherit;
+    border: none;
+    box-shadow: none;
+    transition: box-shadow 2s, color 2s, background-color 2s;
+}
+.edit-over-container button:hover {
+    box-shadow: 3px 3px 10px gray;
+    background-color: rgb(79, 235, 51);
+    color: white;
+    transition-timing-function: linear;
+}
+.edit-over-container input {
+    font-family: cursive;
+    background-color: inherit;
+    border: none;
+    outline: none;
+    border-bottom: 1px dashed black;
+    padding: 7px 10px;
+    margin-left: 10px;
+    transition: border 1s, color 1s;
+}
+.edit-over-container input:focus {
+    border-bottom: 1px solid black;
+    color: white;
+}

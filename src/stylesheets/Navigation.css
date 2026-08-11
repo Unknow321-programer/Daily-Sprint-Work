@@ -1,0 +1,21 @@
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+ul {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+}
+
+li {
+    list-style-type: none;
+    padding: 10px;
+}
+button {
+    justify-self: end;
+    border: 1px solid black;
+}
