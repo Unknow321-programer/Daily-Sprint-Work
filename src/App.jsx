@@ -8,12 +8,16 @@ import HomePage from './components/HomePage'
 import Dashboard from './pages/Dashboard'
 import ViewModal from './components/ViewModal'
 import EditModal from './components/EditModal'
+import Dummy from './components/Dummy'
 
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
+    // <> 
+    //   <Dummy />
+    // </>
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Dashboard />}/>

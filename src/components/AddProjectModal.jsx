@@ -30,6 +30,8 @@ const AddProjectModal = ({ users, setUsers }) => {
         const onlyCharPattern = /^[a-zA-Z\s]+$/;
         const contactPattern = /^[0-9]{10}$/;
         const emailPattern = /^[\S]+[\@]+[\S]+[\.]+[\S]+$/;
+        const websitePattern = /^[\S]+[\.]+[\S]+$/;
+
         let errors = {
             projectName: "",
             client: "",
@@ -40,29 +42,35 @@ const AddProjectModal = ({ users, setUsers }) => {
         let flag = true;
         if (!onlyCharPattern.test(newRecords.projectName)) {
             errors.projectName = "Please enter valid project name";
+            
             flag = false;
         }
 
         if (!onlyCharPattern.test(newRecords.client)) {
             errors.client = "Please enter valid client";
+            
             flag = false;
         }
 
         if (!emailPattern.test(newRecords.projectOwner)) {
             errors.projectOwner = "Please enter valid project owner";
+            
             flag = false;
         }
 
         if (!contactPattern.test(newRecords.contact)) {
             errors.contact = "Please enter valid contact details";
+            
             flag = false;
         }
 
-        if (!onlyCharPattern.test(newRecords.website)) {
+        if (!websitePattern.test(newRecords.website)) {
             error.website = "please enter valid website";
+            
             flag = false;
         }
         setError(errors);
+        console.log(flag);
         return flag;
     }
     const handleAddProjectClick = () => {

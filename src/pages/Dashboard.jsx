@@ -13,6 +13,23 @@ const Dashboard = () => {
     const [loading, setLoading] = useState(true);
     const [currentPage, setCurrentPage] = useState(1);
 
+    // Search component state drive state
+    const [searchPlaceholder, setSearchPlaceholder] = useState("search by project name...");
+    const [selectedSearchBy, setSelectedSearchBy] = useState("project name");
+    const [searchValue, setSearchValue] = useState("");
+
+    const filterData = users.filter(
+        (user) => {
+            if (selectedSearchBy === "project name") {
+                return user.name.toLowerCase().includes(searchValue.toLowerCase());
+            } else if (selectedSearchBy === "client name") {
+                return user.company.name.toLowerCase().includes(searchValue.toLowerCase());
+            } else if (selectedSearchBy === "project owner") {
+                return user.email.toLowerCase().includes(searchValue.toLowerCase());
+            }
+        }
+    )
+
     const loadUserData = async () => {
         setLoading(true);
         try {
@@ -26,31 +43,21 @@ const Dashboard = () => {
             setLoading(false);
         }
     }
-    useEffect(() => {
-        console.log("data ", users);
-    }, [users]);
 
     useEffect(() => {
         loadUserData();
-        // alert("Api is called");
-        return () => {
-        }
     }, [])
 
-    useEffect(() => {
-
-    })
 
     return (
         <div>
             {loading && <Loader />}
             {!loading && <>
                 <StatisticsCards users={users} />
-                <SearchBar users={users} setUsers={setUsers} />
+                <SearchBar searchValue={searchValue} setSearchValue={setSearchValue} searchPlaceholder={searchPlaceholder} setSearchPlaceholder={setSearchPlaceholder} setSelectedSearchBy={setSelectedSearchBy}/> 
                 <AddProjectModal users={users} setUsers={setUsers} />
-                <ProjectTable users={users} currentPage={currentPage} setUsers={setUsers} />
+                <ProjectTable users={searchValue !== "" ? filterData : users} currentPage={currentPage} setUsers={setUsers} />
                 <Pagination totalUsers={users.length} setCurrentPage={setCurrentPage} />
-
             </>
             }
         </div>

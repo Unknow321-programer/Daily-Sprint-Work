@@ -2,20 +2,22 @@ import { useEffect, useState } from "react";
 
 import "../stylesheets/Pagination.css"
 const Pagination = ({ totalUsers, setCurrentPage }) => {
-    const [pages, setPages] = useState([]);
+    // const [pages, setPages] = useState([]);
+    
     const [activeBtn, setActiveBtn] = useState(1);
 
-    useEffect(() => {
-        const totalPages = Math.ceil(totalUsers / 5);
+    const getTotalPages = () => {
+        let totalPages = Math.ceil(totalUsers / 5);
         let newPages = [];
 
-        for(let i = 1; i <= totalPages; i++) {
+        for(let i = 1; i<=totalPages; i++) {
             newPages.push(i);
         }
+        return newPages;
+    }
 
-        setPages(newPages);
+    const pages = getTotalPages();
 
-    }, [totalUsers]);
 
     const handlePageChange = (e) => {
         const btn = e.target.value;
