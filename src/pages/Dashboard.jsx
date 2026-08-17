@@ -14,7 +14,6 @@ const Dashboard = () => {
     const [currentPage, setCurrentPage] = useState(1);
 
     // Search component state drive state
-    const [searchPlaceholder, setSearchPlaceholder] = useState("search by project name...");
     const [selectedSearchBy, setSelectedSearchBy] = useState("project name");
     const [searchValue, setSearchValue] = useState("");
 
@@ -54,7 +53,7 @@ const Dashboard = () => {
             {loading && <Loader />}
             {!loading && <>
                 <StatisticsCards users={users} />
-                <SearchBar searchValue={searchValue} setSearchValue={setSearchValue} searchPlaceholder={searchPlaceholder} setSearchPlaceholder={setSearchPlaceholder} setSelectedSearchBy={setSelectedSearchBy}/> 
+                <SearchBar searchValue={searchValue} setSearchValue={setSearchValue} setSelectedSearchBy={setSelectedSearchBy} selectedSearchBy={selectedSearchBy} /> 
                 <AddProjectModal users={users} setUsers={setUsers} />
                 <ProjectTable users={searchValue !== "" ? filterData : users} currentPage={currentPage} setUsers={setUsers} />
                 <Pagination totalUsers={users.length} setCurrentPage={setCurrentPage} />
